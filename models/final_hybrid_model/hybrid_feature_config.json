@@ -1,0 +1,60 @@
+{
+    "text_representation": {
+        "model": "distilbert-base-uncased",
+        "embedding_dimension": 768,
+        "max_length": 256
+    },
+    "behavioral_features": [
+        "rating",
+        "is_1_star",
+        "is_5_star",
+        "helpful_votes",
+        "has_helpful_votes",
+        "photo_count",
+        "has_photos",
+        "review_text_length",
+        "review_word_count",
+        "review_title_length",
+        "review_title_word_count",
+        "review_year",
+        "review_month",
+        "review_day_of_week",
+        "punctuation_count",
+        "exclamation_count",
+        "question_count",
+        "comma_count",
+        "digit_count",
+        "uppercase_count",
+        "letter_count",
+        "uppercase_ratio",
+        "digit_ratio",
+        "avg_word_length",
+        "unique_word_ratio",
+        "title_text_length_ratio",
+        "sentiment_polarity",
+        "sentiment_subjectivity",
+        "reviewer_review_count",
+        "reviewer_avg_rating",
+        "reviewer_rating_std",
+        "reviewer_avg_helpful"
+    ],
+    "total_features": 800,
+    "classifier": {
+        "model": "XGBoost",
+        "n_estimators": 500,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "min_child_weight": 1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "scale_pos_weight": 0.85
+    },
+    "classification_threshold": 0.36,
+    "test_results": {
+        "accuracy": 0.8741,
+        "balanced_accuracy": 0.8569,
+        "precision": 0.9058,
+        "recall": 0.9069,
+        "f1": 0.9064
+    }
+}
